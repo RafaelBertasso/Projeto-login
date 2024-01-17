@@ -32,8 +32,9 @@ Grandes telas: acima de 1200px
     }
 }
 
+/* Versão desktop e telas grandes*/
 @media screen and (min-width: 992px) {
-    
+
     body {
         background-image: linear-gradient(to top, #2892D7, #ffffff);
     }
@@ -42,13 +43,21 @@ Grandes telas: acima de 1200px
     }
 
     section#login > div#imagem {
-        float: left;
+        float: right;
         width: 50%;
         height: 100%;
     }
 
     section#login > div#form {
-        float: right;
+        float: left;
         width: 50%;
+    }
+
+    div#form > h1 {
+        font-size: 2em;
+    }
+
+    div#form > p {
+        font-size: 1.2em;
     }
 }
