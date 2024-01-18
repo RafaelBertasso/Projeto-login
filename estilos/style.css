@@ -34,7 +34,7 @@ section#login {
     position: relative;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    
     overflow: hidden;
 
     background-color: white;
@@ -45,6 +45,7 @@ section#login {
 
     transition: width .5s, height .5s;
     transition-timing-function: ease;
+    transform: translate(-50%, -50%);
 }
 
 section#login > div#imagem {
@@ -72,15 +73,40 @@ div#form > p {
 
 form > div.campo {
     background-color: rgba(128, 202, 255, 0.300);
+    border: 2px solid rgb(128, 202, 255);
     width: 100%;
     height: 30px;
     display: block;
-    border-radius: 5px;
+    border-radius: 8px;
     margin: 5px 0px;
 }
 
 div.campo > label {
     display: none;
+}
+
+div.campo > span {
+    color: rgba(0, 0, 0, 0.686);
+    transform: translate(-5px, -5px);
+    font-size: 2em;
+    width: 30px;
+    padding: 5px;
+}
+
+/* Sempre que for fazer um transform, fazer como ultima alteração do seletor*/
+div.campo > input {
+    background-color: rgba(52, 174, 255, 0.650);
+    font-size: 1em;
+    width: calc(100% - 40px);
+    height: 100%;
+    border: 0px;
+    border-radius: 8px;
+    padding: 3px;
+    transform: translateY(-17px);
+}
+
+div.campo > input:focus-within {
+    background-color: white;
 }
 
 form > input[type = submit] {
